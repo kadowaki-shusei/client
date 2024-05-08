@@ -169,8 +169,7 @@ function renderData(data) {
 
 
             }
-                alert("削除しました。");
-                    location.reload();
+                location.reload();
 
             // ここで削除ボタンがクリックされた行の顧客IDを使って削除処理を行う必要があります
         });
