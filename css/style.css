@@ -6,7 +6,7 @@ body {
 
 header {
     display: flex;
-    width: 1880px;
+    width: 1565px;
     height: 100px;
     margin: 0 auto;
     background-color: #e7e5e5;
@@ -14,7 +14,7 @@ header {
 }
 
 header h1 {
-  width: 1880px;
+  width: 2500px;
     padding-top: 10px;
     padding-left: 100px;
     margin-left: auto;
