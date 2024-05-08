@@ -6,35 +6,43 @@ body {
 
 header {
     display: flex;
-    width: 100%;
+    width: 1880px;
     height: 100px;
+    margin: 0 auto;
     background-color: #e7e5e5;
     border-bottom: 3px solid #000000;
 }
 
 header h1 {
-  width: 100%;
+  width: 1880px;
     padding-top: 10px;
-    padding-left: 1.5em;
+    padding-left: 100px;
+    margin-left: auto;
+    margin-right: auto;
     white-space: nowrap;
     font-weight:lighter;
 }
 
 header a {
-  width: 15%;
+  width: 100%;
   font-size: 25px;
-  margin-top: 40px;
-  margin-right:20px;
+  margin: auto;
 }
 
 main .list-title {
+  width: 500px;
+  margin-top: auto;
+  margin-bottom: auto;
+
   padding-top: 40px;
   padding-left: 300px;
   font-size: 35px;
 }
 
 main .sign-title {
-  margin-top: 20px;
+  width: 500px;
+  margin-top: auto;
+  margin-bottom: auto;
   padding-left: 300px;
   font-size: 45px;
 }
@@ -77,9 +85,10 @@ button.top-btn:hover {
 
 button.client-signup-btn {
 /* 整える */
-margin-top: 2%;
-margin-bottom: 15%;
-margin-left: 10%;
+height: 80px;
+margin-top: 50px;
+margin-bottom: 50px;
+margin-left:50px;
 padding-top: 20px;
 padding-bottom: 20px;
 padding-left: 50px;
@@ -176,9 +185,8 @@ button.company-modal-btn {
 
 
 .search-box {
-  width: 30%;
+  width: 500px;
   margin-top: 50px;
-  margin-left: 20%;
   padding-top: 4%;
   padding-bottom: 0;
   padding-left: 3%;
@@ -187,15 +195,10 @@ button.company-modal-btn {
 }
 
 
-.search-box li {
-  width: 100%;
-  margin-right: 0;
-  padding-left: 10px;
-  padding-right: 400px;
-  font-weight: lighter;
-}
+
 
 .search-box .client-search-btn {
+  margin-right: auto;
   text-align: center;
   white-space: nowrap;
   font-size: 16px; /* フォントサイズ */
@@ -212,7 +215,7 @@ button.company-modal-btn {
 
 
 .search-box .cancel-btn {
-  margin-left: 60%;
+  margin-left: 180px;
   text-align: center;
   white-space: nowrap;
   font-size: 16px; /* フォントサイズ */
@@ -308,6 +311,7 @@ th {
 main .content-wrap {
   display: flex;
   justify-content: center;
+  margin: 0 auto 0 auto;
 }
 
 main .birthday {
@@ -325,10 +329,12 @@ main .date {
 }
 
 
+
 .signup-box form {
+  width: 500px;
   margin-top: 80px;
-  margin-right: 20%;
-  margin-left: 25%;
+  margin-right: auto;
+  margin-left: auto;
   padding-top: 20px;
   padding-bottom: 10px;
   padding-left: 10%;

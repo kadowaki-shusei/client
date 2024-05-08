@@ -1,7 +1,7 @@
 <?php
 class DB {
     public $servername = 'localhost';    // ホスト名
-    public $username = 'localhost';     // ユーザー名
+    public $username = 'root';     // ユーザー名
 
     public $password = '';         // パスワード（必要に応じて設定してください
 
