@@ -35,7 +35,7 @@ window.addEventListener("load", function() {
     const field = document.getElementById("last_birthday");
     if (field) { 
         field.value = data;
-        field.setAttribute("min", data);
+        // field.setAttribute("min", data);
     } else {
         console.error("Element with id 'last_birthday' not found."); 
     }
