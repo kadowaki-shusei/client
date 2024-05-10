@@ -83,7 +83,7 @@ button.top-btn:hover {
 }
 
 
-button.client-signup-btn {
+.client-signup-btn {
 /* 整える */
 height: 80px;
 margin-top: 50px;
@@ -136,10 +136,6 @@ button.saveButton {
   border: 2px solid #000000; /* 枠線を消す */
   }
   
-  /* ホバー時（カーソルをのせた時）の見た目 */
-  button.client-update-btn:hover {
-  background-color: #2f71ff; /* 背景色 */
-  }
 
 
 button.deleteButton {
@@ -232,6 +228,7 @@ button.company-modal-btn {
 
 .client_list {
   margin: auto;
+  margin-bottom: 100px;
 }
 .client_list  tbody{
   padding: 10px 20px;
@@ -355,7 +352,7 @@ border: 2px solid #000000; /* 枠線を消す */
 }
 
 /* ホバー時（カーソルをのせた時）の見た目 */
-.signup-form-btn:hover {
+.signForm:hover {
 background-color: #6cd694; /* 背景色 */
 }
 
