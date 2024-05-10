@@ -47,8 +47,7 @@ document.getElementById('search').addEventListener('click', function() {
     const table = document.getElementById("UserList");
     table.innerHTML = '';
     
-    // form.addEventListener('submit', function(event) {
-        // event.preventDefault();
+
         const formData = new FormData(form);
         const jsonData = {};
 
@@ -57,21 +56,18 @@ document.getElementById('search').addEventListener('click', function() {
         });
 
         jsonData["method"] = 'search'
-        // const jsonString = JSON.stringify(jsonData); // オブジェクトをJSON形式の文字列に変換
-        // console.log(jsonString); // JSON形式の文字列をコンソールに表示
+
 
         console.log(jsonData);
 
         fetch('api/controller.php', {
             method: 'POST',
-            // headers: {
-            //     'Content-Type': 'application/json'
-            // },
+      
             body: JSON.stringify(jsonData)
         })
         .then(response => response.json())
         .then(data => {
-            // console.log(typeof(data));
+
             console.log(data);
             if (data.error) {
                 console.error('Error:', data.error);
@@ -80,7 +76,6 @@ document.getElementById('search').addEventListener('click', function() {
                 renderData(data.body); // データをビューに表示する関数を呼び出す
             }
         })
-        //.catch(error => console.error('Error:', error));
     
 });
 
@@ -110,7 +105,6 @@ document.getElementById('cancel').addEventListener('click', function() {
 
 
 
-// document.getElementById('search').addEventListener('click', function() {
 
 // データをビューに表示する関数
 function renderData(data) {

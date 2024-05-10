@@ -16,11 +16,11 @@
             <div class="search-box">
                 <form method="POST" id="searchform">
                     <div>
-                        <label>顧客名　　　　　<input name="name"></label>
+                        <label>顧客名　　　　　<input maxlength="32" name="name"></label>
                     </div>
 
                     <div>
-                        <label>顧客名（カナ）　<input name="kana"></label>
+                        <label>顧客名（カナ）　<input maxlength="32"  name="kana"></label>
                     </div>
 
                     <div>

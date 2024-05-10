@@ -6,7 +6,7 @@ body {
 
 header {
     display: flex;
-    width: 1565px;
+    width: auto;
     height: 100px;
     margin: 0 auto;
     background-color: #e7e5e5;

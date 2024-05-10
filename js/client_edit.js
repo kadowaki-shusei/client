@@ -1,16 +1,13 @@
 window.addEventListener("load", function() {
 
     const params = new URLSearchParams(this.window.location.search);
-    // for(let param of params){
-    //     console.log(param[1]);
-    //     }
+   
     let id = params.get('id');
 
     const jsonData = {"data":{
         "id":id
     },
     "method" : 'detail'};
-    // console.log(jsonData["data"]);
  
     // fetchを使ってAPIエンドポイントにPOSTリクエストを送信
     fetch('api/controller.php', {
@@ -45,13 +42,11 @@ window.addEventListener("load", function() {
 
 
 
-// document.addEventListener('DOMContentLoaded', function() {
+
     function edit() {
         const form = document.querySelector('#editForm'); // 最初に見つかったform要素を取得する
     
-    // form.addEventListener('click', function(event) {
-        
-        // event.preventDefault();
+ 
         const formData = new FormData(form);
         const params = new URLSearchParams(this.window.location.search);
 
@@ -64,8 +59,7 @@ window.addEventListener("load", function() {
             jsonData[key] = value;
         });
     
-        // const jsonString = JSON.stringify(jsonData); // オブジェクトをJSON形式の文字列に変換
-        // console.log(jsonString); // JSON形式の文字列をコンソールに表示
+
 
         fetch('api/controller.php', {
             method: 'POST',

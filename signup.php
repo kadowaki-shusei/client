@@ -89,19 +89,19 @@
         <div class="signup-box">
             <form method="POST" id="Signupform">
                 <div>
-                   <label>顧客名　　　　　<input name="name"></label>
+                   <label>顧客名　　　　　<input maxlength="32" name="name" required></label>
                 </div>
 
                 <div>
-                    <label>顧客名（カナ）　<input name="kana"></label>
+                    <label>顧客名（カナ）　<input maxlength="32" pattern="^[ァ-ヶー]+$" name="kana" required></label>
                 </div>
 
                 <div>
-                   <label>メールアドレス　<input type="email" name="mail"></label>
+                   <label>メールアドレス　<input pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" maxlength="60" type="email" name="mail"></label>
                 </div>
 
                 <div>
-                    <label>電話番号　　　　<input type="tel" name="tel"></label>
+                    <label>電話番号　　　　<input pattern="[0-9]{2,4}[0-9]{2,4}[0-9]{3,4}" maxlength="12" type="tel" name="tel"></label>
                 </div>
 
                 <div>
@@ -114,7 +114,7 @@
                 </div>
 
                 <div class="date">
-                        <label>生年月日　　　　<input name="birthday" type="date"></label>                    
+                        <label>生年月日　　　　<input name="birthday" type="date" required></label>                    
                 </div>
 
                 <div>

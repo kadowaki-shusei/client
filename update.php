@@ -89,19 +89,19 @@
         <div class="signup-box">
             <form method="POST" id="editForm">
                 <div>
-                   <label>顧客名　　　　　<input id="name" name="name"></label>
+                   <label>顧客名　　　　　<input id="name" maxlength="32" name="name"></label>
                 </div>
 
                 <div>
-                    <label>顧客名（カナ）　<input id="kana" name="kana"></label>
+                    <label>顧客名（カナ）　<input id="kana" maxlength="32" pattern="^[ァ-ヶー]+$" name="kana"></label>
                 </div>
 
                 <div>
-                   <label>メールアドレス　<input type="email" id="mail" name="mail"></label>
+                   <label>メールアドレス　<input pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" maxlength="60" type="email" id="mail" name="mail"></label>
                 </div>
 
                 <div>
-                    <label>電話番号　　　　<input type="tel" id="tel" name="tel"></label>
+                    <label>電話番号　　　　<input type="tel" pattern="[0-9]{2,4}[0-9]{2,4}[0-9]{3,4}" maxlength="12" id="tel" name="tel"></label>
                 </div>
 
                 <div>

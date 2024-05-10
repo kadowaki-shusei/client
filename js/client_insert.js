@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', function() {
     form.addEventListener('submit', function(event) {
         event.preventDefault();
         const formData = new FormData(form);
-        // console.log(formData);
         const jsonData = {};
 
         formData.forEach((value, key) => {
@@ -11,8 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         jsonData["method"] = 'insert'
-        // const jsonString = JSON.stringify(jsonData); // オブジェクトをJSON形式の文字列に変換
-        // console.log(jsonString); // JSON形式の文字列をコンソールに表示
+
 
         fetch('api/controller.php', {
             method: 'POST',
