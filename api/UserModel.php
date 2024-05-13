@@ -76,17 +76,15 @@ class UserModel {
             }
             
         }
-        //var_dump($List);
         return $List;          
 
     }
     
     //一覧
-    public function UserList() {
+    public function List() {
         $db = new DB(); 
         $conn = $db->getConnection(); 
 
-        $List = array(); // 初期化
 
         $query = "SELECT * FROM users AS u LEFT JOIN companies AS c ON u.company_id = c.company_id"; 
 
@@ -104,7 +102,6 @@ class UserModel {
         $db = new DB(); 
         $conn = $db->getConnection(); 
 
-        $List = array(); // 初期化
 
         $query = "SELECT name, kana, mail, tel, gender, birthday, company_id FROM users WHERE id = '{$data['id']}' "; 
 
@@ -125,7 +122,6 @@ class UserModel {
 
         $stmt = $conn->prepare("UPDATE users SET name = ?, kana = ?, mail = ?, tel = ?, gender = ?, birthday = ?, company_id = ? WHERE id = ?");
         $stmt->bind_param("ssssisii", $data['name'], $data['kana'], $data['mail'], $data['tel'], $data['gender'], $data['birthday'], $data['company_id'], $data['id']);
-    // Execute the statement
         
 
         $responseData = array();

@@ -35,7 +35,6 @@ window.addEventListener("load", function() {
     const field = document.getElementById("last_birthday");
     if (field) { 
         field.value = data;
-        // field.setAttribute("min", data);
     } else {
         console.error("Element with id 'last_birthday' not found."); 
     }
@@ -58,7 +57,6 @@ document.getElementById('search').addEventListener('click', function() {
         jsonData["method"] = 'search'
 
 
-        console.log(jsonData);
 
         fetch('api/controller.php', {
             method: 'POST',
@@ -68,7 +66,6 @@ document.getElementById('search').addEventListener('click', function() {
         .then(response => response.json())
         .then(data => {
 
-            console.log(data);
             if (data.error) {
                 console.error('Error:', data.error);
             } else {
@@ -165,7 +162,7 @@ function renderData(data) {
             }
                 location.reload();
 
-            // ここで削除ボタンがクリックされた行の顧客IDを使って削除処理を行う必要があります
+
         });
     });
 }

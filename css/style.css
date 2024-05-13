@@ -33,18 +33,20 @@ main .list-title {
   width: 500px;
   margin-top: auto;
   margin-bottom: auto;
-
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
   padding-top: 40px;
-  padding-left: 300px;
-  font-size: 35px;
+  font-size: 40px;
 }
 
 main .sign-title {
-  width: 500px;
-  margin-top: auto;
-  margin-bottom: auto;
-  padding-left: 300px;
-  font-size: 45px;
+  text-align: center;
+  width: 250px;
+  margin-top: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 40px;
 }
 
 main .company-title {
@@ -86,9 +88,7 @@ button.top-btn:hover {
 .client-signup-btn {
 /* 整える */
 height: 80px;
-margin-top: 50px;
-margin-bottom: 50px;
-margin-left:50px;
+margin: auto;
 padding-top: 20px;
 padding-bottom: 20px;
 padding-left: 50px;
@@ -182,9 +182,10 @@ button.company-modal-btn {
 
 .search-box {
   width: 500px;
+  margin-left: 670px;
   margin-top: 50px;
-  padding-top: 4%;
-  padding-bottom: 0;
+  padding-top: 30px;
+  padding-bottom: 30px;
   padding-left: 3%;
   font-size: 21px;
   border: solid 3px #5fdaeb;
@@ -194,7 +195,7 @@ button.company-modal-btn {
 
 
 .search-box .client-search-btn {
-  margin-right: auto;
+  margin-left: 15px;
   text-align: center;
   white-space: nowrap;
   font-size: 16px; /* フォントサイズ */
@@ -212,6 +213,7 @@ button.company-modal-btn {
 
 .search-box .cancel-btn {
   margin-left: 180px;
+  margin-top: 15px;
   text-align: center;
   white-space: nowrap;
   font-size: 16px; /* フォントサイズ */
@@ -229,6 +231,8 @@ button.company-modal-btn {
 .client_list {
   margin: auto;
   margin-bottom: 100px;
+ 
+  
 }
 .client_list  tbody{
   padding: 10px 20px;
@@ -236,15 +240,28 @@ button.company-modal-btn {
   font-size: 21px;
   border-collapse: collapse;
   text-align: center;
+
 }
-th, tr {
+.client_list td {
   border: 1px solid #333;
 }
+
+ 
+
 th {
   background-color: #8eec96;
   color: #000000;
   font-weight: lighter;
+
+} 
+
+.client_list thead {
+  font-size: 20px;
+
 }
+
+
+
 
 .company-list {
   width: 75%;
@@ -256,32 +273,28 @@ th {
   border-collapse: collapse;
   text-align: center;
 }
-th, td {
-  border: 1px solid #333;
-}
-th {
-  background-color: #8eec96;
-  color: #000000;
-  font-weight: lighter;
-}
+
 
 
 
 .style0 {
-  margin-top:40px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
   margin-bottom: 40px;
   background-color: #6cd694;
   border:none;
-  height:8px;
-  width: 75%;
+  height:9px;
+  width: 80%;
  }
 
  .style1 {
-  margin-top:20px;
-  margin-bottom: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
   background-color: #6cd694;
   border:none;
-  height:8px;
+  height:9px;
   width: 75%;
  }
 
@@ -307,7 +320,6 @@ th {
 
 main .content-wrap {
   display: flex;
-  justify-content: center;
   margin: 0 auto 0 auto;
 }
 
@@ -330,6 +342,7 @@ main .date {
 .signup-box form {
   width: 500px;
   margin-top: 80px;
+  margin-bottom: 100px;
   margin-right: auto;
   margin-left: auto;
   padding-top: 20px;
@@ -341,19 +354,21 @@ main .date {
 }
 
 .signForm {
-margin-left: 50%;
-text-align: center;
-white-space: nowrap;
-font-size: 22px; /* フォントサイズ */
-background-color: #cdf0dc; /* 背景色 */
-color: black; /* テキストカラー */
-border-radius: 8px; /* 角の丸み */
-border: 2px solid #000000; /* 枠線を消す */
-}
+  margin-top: 25px;
+  margin-left: 350px;
+  text-align: center;
+  white-space: nowrap;
+  font-size: 22px; /* フォントサイズ */
+  background-color: #cdf0dc; /* 背景色 */
+  color: black; /* テキストカラー */
+  border-radius: 8px; /* 角の丸み */
+  border: 2px solid #000000; /* 枠線を消す */
+  }
 
-/* ホバー時（カーソルをのせた時）の見た目 */
-.signForm:hover {
-background-color: #6cd694; /* 背景色 */
+
+  /* ホバー時（カーソルをのせた時）の見た目 */
+  .signForm:hover {
+  background-color: #6cd694; /* 背景色 */
 }
 
 
@@ -425,7 +440,8 @@ background-color: #6cd694; /* 背景色 */
 
 
 .client-editButton {
-  margin-left: 50%;
+  margin-top: 25px;
+  margin-left: 350px;
   text-align: center;
   white-space: nowrap;
   font-size: 22px; /* フォントサイズ */
@@ -433,10 +449,29 @@ background-color: #6cd694; /* 背景色 */
   color: black; /* テキストカラー */
   border-radius: 8px; /* 角の丸み */
   border: 2px solid #000000; /* 枠線を消す */
-  }
+}
   
   /* ホバー時（カーソルをのせた時）の見た目 */
   .client-editButton:hover {
   background-color: #6cd694; /* 背景色 */
   }
   
+
+
+.search-box input, select{
+    padding: 4px;
+}
+
+.search-box label {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+.signup-box input, select {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+

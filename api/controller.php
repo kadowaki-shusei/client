@@ -19,7 +19,7 @@ if ($data["method"] === 'insert') {
     }
     
 } elseif ($data["method"] === 'list') {
-    $customerList = $reflectionClass->UserList(); 
+    $customerList = $reflectionClass->List(); 
     $responseData["body"] = $customerList;
 
 } elseif ($data["method"] === 'search') {

@@ -126,8 +126,7 @@
                     </label>
         </div>
                 <input class="same-btn client-editButton" onclick="edit();" id="Edit" type="button" value="更新">
-            </form>
-        <hr class="style1">    
+            </form>  
     </main>
     <script src="js/company.js"></script>
     <script src="js/client_edit.js"></script>

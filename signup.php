@@ -127,7 +127,6 @@
             </div>
                 <input class="same-btn signForm" type="submit" id="Signup" value="登録">
             </form>
-        <hr class="style1">    
     </main>
     <script src="js/company.js"></script>
     <script src="js/client_insert.js"></script>
