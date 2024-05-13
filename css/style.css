@@ -348,7 +348,7 @@ main .date {
   padding-bottom: 10px;
   padding-left: 10%;
   padding-right: 50px; 
-  font-size: 30px;
+  font-size: 25px;
 
 }
 
@@ -471,6 +471,8 @@ background-color: #6cd694; /* 背景色 */
     padding-bottom: 6px;
     padding-left: 50px;
     padding-right: 50px;
+    margin-top: 5px;
+    margin-bottom: 5px;
   }
 
 
