@@ -24,9 +24,9 @@ header h1 {
 }
 
 header a {
-  width: 100%;
-  font-size: 25px;
-  margin: auto;
+  width: 300px;
+  font-size: 18px;
+  text-decoration: none;
 }
 
 main .list-title {
@@ -476,3 +476,37 @@ background-color: #6cd694; /* 背景色 */
   }
 
 
+.top-link {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: 350px;
+  padding-top: 13px;
+  text-align: center;
+  background-color: #8fcafa; /* 背景色 */
+  color: black; /* テキストカラー */
+  border-radius: 8px; /* 角の丸み */
+  border: 2px solid #000000; /* 枠線を消す */
+}
+    
+    /* ホバー時（カーソルをのせた時）の見た目 */
+.top-link:hover {
+    background-color: #2f71ff; /* 背景色 */
+    }
+
+
+.list-link {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: 350px;
+  padding-top: 13px;
+  text-align: center;
+  background-color: #8fcafa; /* 背景色 */
+  color: black; /* テキストカラー */
+  border-radius: 8px; /* 角の丸み */
+  border: 2px solid #000000; /* 枠線を消す */
+}
+  
+  /* ホバー時（カーソルをのせた時）の見た目 */
+.list-link:hover {
+  background-color: #2f71ff; /* 背景色 */
+}

@@ -9,8 +9,8 @@
 <body>
     <header class="header">
         <h1>顧客管理システム</h1>
-        <a href="list.php">一覧に戻る</a>
-        <a href="index.php">TOPに戻る</a>
+        <a href="list.php"class="list-link">一覧に戻る</a>
+        <a href="index.php" class="top-link">TOPに戻る</a>
     </header>
     <main>
         <button class="same-btn company-modal-btn" id="company-modal-btn">所属会社一覧</button>

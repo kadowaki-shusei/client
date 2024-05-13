@@ -9,7 +9,7 @@
 <body>
     <header class="header">
         <h1>顧客管理システム</h1>
-        <a href="index.php">TOPに戻る</a>
+        <a href="index.php" class="top-link">TOPに戻る</a>
     </header>
     <main>
         <div class="content-wrap">
