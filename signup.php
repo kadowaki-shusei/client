@@ -93,11 +93,11 @@
                 </div>
 
                 <div>
-                    <label>顧客名（カナ）　<input maxlength="32" pattern="^[ァ-ヶー]+$" name="kana" required></label>
+                    <label nowrap>顧客名（カナ）　<input maxlength="32" pattern="^[ァ-ヶー]+$" name="kana" required></label>
                 </div>
 
                 <div>
-                   <label>メールアドレス　<input pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" maxlength="60" type="email" name="mail"></label>
+                   <label nowrap>メールアドレス　<input pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" maxlength="60" type="email" name="mail"></label>
                 </div>
 
                 <div>
