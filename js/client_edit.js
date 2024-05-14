@@ -41,39 +41,107 @@ window.addEventListener("load", function() {
 
 
 
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.querySelector('#editForm'); 
+    const inputElms = form.querySelectorAll('input, select');
 
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
 
-    function edit() {
-        const form = document.querySelector('#editForm'); // 最初に見つかったform要素を取得する
-    
- 
-        const formData = new FormData(form);
-        const params = new URLSearchParams(this.window.location.search);
-
-        let id = params.get('id');
-
-        const jsonData = {"id":id
-        ,  "method" : 'edit'};
-
-        formData.forEach((value, key) => {
-            jsonData[key] = value;
+        // Clear previous error messages
+        inputElms.forEach((input) => {
+            const label = input.closest('label');
+            if (label) {
+                label.classList.remove('is-error');
+                const errorMessage = label.nextElementSibling;
+                if (errorMessage && errorMessage.classList.contains('error-message')) {
+                    errorMessage.textContent = '';
+                }
+            }
         });
-    
 
+        // Check for validation
+        let isValid = true;
+        inputElms.forEach((input) => {
+            if (!input.checkValidity()) {
+                isValid = false;
+                const label = input.closest('label');
+                if (label) {
+                    label.classList.add('is-error');
+                    const errorMessage = label.nextElementSibling;
+                    if (errorMessage && errorMessage.classList.contains('error-message')) {
+                        if (input.tagName.toLowerCase() === 'select') {
+                            errorMessage.textContent = 'このフィールドは選択してください';
+                        } else if (input.validity.patternMismatch) {
+                            input.setCustomValidity(input.title);
+                            errorMessage.textContent = input.validationMessage;
+                            input.setCustomValidity('');
+                        } else {
+                            errorMessage.textContent = input.validationMessage;
+                        }
+                    }
+                }
+            }
+        });
 
-        fetch('api/controller.php', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(jsonData)
-        })
-        
-        .then(response => response.json())
-        .then(data => console.log((data)))
+        if (isValid) {
+            const formData = new FormData(form);
+            const params = new URLSearchParams(window.location.search);
+            let id = params.get('id');
 
-        alert("更新しました。");
+            const jsonData = { "id": id, "method": 'edit' };
 
-        window.location.href = "list.php";
+            formData.forEach((value, key) => {
+                jsonData[key] = value;
+            });
 
-    }
+            fetch('api/controller.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(jsonData)
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                alert("更新しました。");
+                window.location.href = "list.php";
+            })
+            .catch(error => console.error('Error:', error));
+        }
+    });
+
+    inputElms.forEach((input) => {
+        input.addEventListener('input', () => {
+            const label = input.closest('label');
+            if (label && input.checkValidity()) {
+                label.classList.remove('is-error');
+                const errorMessage = label.nextElementSibling;
+                if (errorMessage && errorMessage.classList.contains('error-message')) {
+                    errorMessage.textContent = '';
+                }
+            }
+        });
+
+        input.addEventListener('invalid', (e) => {
+            e.preventDefault();
+            const label = input.closest('label');
+            if (label) {
+                label.classList.add('is-error');
+                const errorMessage = label.nextElementSibling;
+                if (errorMessage && errorMessage.classList.contains('error-message')) {
+                    if (input.tagName.toLowerCase() === 'select') {
+                        errorMessage.textContent = 'この項目は選択必須です';
+                    } else if (input.validity.patternMismatch) {
+                        input.setCustomValidity(input.title);
+                        errorMessage.textContent = input.validationMessage;
+                        input.setCustomValidity('');
+                    } else {
+                        errorMessage.textContent = input.validationMessage;
+                    }
+                }
+            }
+        });
+    });
+});

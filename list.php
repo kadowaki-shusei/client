@@ -16,7 +16,7 @@
             <div class="search-box">
                 <form method="POST" id="searchform">
                     <div>
-                        <label>顧客名　　　　　<input maxlength="32" name="name"></label>
+                        <label>顧客名　　　　　<input type="text" maxlength="32" name="name"></label>
                     </div>
 
                     <div>
@@ -41,9 +41,9 @@
                     <div>
                         <label>所属会社　　　　<select name="company_id">
                             <option value="all">全て</option>
-                            <option value="1">1.A株式会社</option>
-                            <option value="2">2.B株式会社</option>
-                            <option value="3">3.C株式会社</option>
+                            <option value="1">所属会社A</option>
+                            <option value="2">所属会社B</option>
+                            <option value="3">所属会社C</option>
                             </select>
                         </label>
                     </div>

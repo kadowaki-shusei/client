@@ -1,5 +1,6 @@
+//一覧処理
 window.addEventListener("load", function() {
-    // ページが完全に読み込まれた時の処理をここに記述する
+
     const jsonData = {};
     jsonData["method"] = 'list';
 
@@ -24,6 +25,9 @@ window.addEventListener("load", function() {
 
 
 
+
+
+    //生年月日検索の初期表示
     const last_birthday = new Date();
     function dateFormat(date, format){
         format = format.replace("YYYY", date.getFullYear());

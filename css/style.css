@@ -324,7 +324,6 @@ main .content-wrap {
 }
 
 main .birthday {
-  display: flex;
   align-items: center;
 }
 
@@ -467,12 +466,12 @@ background-color: #6cd694; /* 背景色 */
   }
 
 .signup-box input, select {
-    padding-top: 6px;
-    padding-bottom: 6px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     padding-left: 50px;
     padding-right: 50px;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 
 
@@ -513,4 +512,19 @@ background-color: #6cd694; /* 背景色 */
 
 .link1 {
   margin-right: 350px;
+}
+
+
+label.is-error > span {
+  color: red;
+}
+label.is-error > input{
+  border-color: red;
+  background-color: rgba(200, 0, 0, 0.1);
+}
+
+.error-message {
+  display: block;
+  color: red;
+  font-size: 12px;
 }

@@ -3,14 +3,18 @@
 require 'DB.php';
 
 //会社のデータ処理を記載
-
-class Companies extends Model
-{
-    protected function getValue() {
-        return "Companies";
+class CompanyModel {
+    private $conn;
+    public function __construct($conn) {
+        $this->conn = $conn;
     }
 
-    public function prefixValue($prefix) {
-        return "{$prefix}Companies";
-    }
+
+
+
+
+
+
+
 }
+

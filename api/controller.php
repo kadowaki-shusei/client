@@ -4,7 +4,7 @@ require_once 'UserModel.php';
 $json_data = file_get_contents('php://input');
 $data = json_decode($json_data, true);
 
-
+//顧客処理
 $reflectionClass = new UserModel();
 $responseData = [];
 
@@ -49,7 +49,11 @@ if ($data["method"] === 'insert') {
 
 }else {
     $responseData["error"] = "Unknown action";
-}
-
-
+};
 echo json_encode($responseData);
+
+
+
+
+
+
